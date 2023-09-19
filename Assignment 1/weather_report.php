@@ -18,7 +18,7 @@ Create a PHP script named weather_report.php that provides weather information b
 
 <body>
 
-  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>" method="POST" class="form-control text-center p-4 bg-light" style="margin-top: 300px;">
+  <form action="" method="POST" class="form-control text-center p-4 bg-light" style="margin-top: 300px;">
    <h4 class="pb-5">Weather Report </h4>
     <span>Enter Temparature</span>
     <input type="number" class="form-input " name="tempa">
