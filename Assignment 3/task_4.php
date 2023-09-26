@@ -8,10 +8,11 @@ Each student has grades for three subjects: Math, English, and Science.
 <?php
 $averageGrades = [];
 
+// Created a Multidimensional Array based on condition
 $studentGrades = [
   "student1" => ["Math" => 85, "English" => 65, "Science" => 75],
   "student2" => ["Math" => 95, "English" => 75, "Science" => 85],
-  "student3" => ["Math" => 85, "English" => 70, "Science" => 85]
+  "student3" => ["Math" => 20, "English" => 40, "Science" => 50]
 
 
 ];
@@ -25,11 +26,11 @@ function gradeCalculate($studentGrades)
 
     $averageGrades[$student] = $average;
   }
-  // print grade
-  $grade="";
+  //condition for printing grade based on average number
+  $grade = "";
   foreach ($averageGrades as $student => $average) {
 
-    if ($average >= 80) {
+    if ($average >= 80 && $average <= 100) {
       $grade = "A+";
     } else if ($average >= 70) {
       $grade = "A";
@@ -39,10 +40,15 @@ function gradeCalculate($studentGrades)
       $grade = "C";
     } else if ($average >= 40) {
       $grade = "D";
-    } else {
+    } else if ($average < 40 && $average >= 0) {
       $grade = "F";
     }
-    echo "Average Numbers and Grades for {$student} are {$average}  {$grade}, \n";
+    else
+    {
+      $grade = "invalid ";
+    }
+   
+    echo "Average Grades for {$student} is {$grade}, \n";
   }
 }
 
