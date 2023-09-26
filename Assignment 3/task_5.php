@@ -10,12 +10,16 @@ The password should include lowercase letters, uppercase letters, numbers, and s
 function generatePassword($length)
 {
   $randomNmber = '';
-  $character = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+";
+  $lowerCase = "abcdefghijklmnopqrstuvwxyz1234567890";
+  $upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  $specialChar = "!@#$%^&*()_+";
+
+  $allChars = $lowerCase . $upperCase . $specialChar;
 
 
   for ($i = 0; $i < $length; $i++) {
 
-    $randomNmber .= $character[rand(0, strlen($character) - 1)];
+    $randomNmber .= $allChars[rand(0, strlen($allChars) - 1)];
   }
   echo $randomNmber;
 }

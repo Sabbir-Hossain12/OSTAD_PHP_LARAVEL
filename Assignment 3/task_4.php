@@ -11,7 +11,7 @@ $averageGrades = [];
 $studentGrades = [
   "student1" => ["Math" => 85, "English" => 65, "Science" => 75],
   "student2" => ["Math" => 95, "English" => 75, "Science" => 85],
-  "student3" => ["Math" => 75, "English" => 65, "Science" => 85]
+  "student3" => ["Math" => 85, "English" => 70, "Science" => 85]
 
 
 ];
@@ -26,8 +26,23 @@ function gradeCalculate($studentGrades)
     $averageGrades[$student] = $average;
   }
   // print grade
+  $grade="";
   foreach ($averageGrades as $student => $average) {
-    echo "Average Grades for $student is $average <br>";
+
+    if ($average >= 80) {
+      $grade = "A+";
+    } else if ($average >= 70) {
+      $grade = "A";
+    } else if ($average >= 60) {
+      $grade = "B";
+    } else if ($average >= 50) {
+      $grade = "C";
+    } else if ($average >= 40) {
+      $grade = "D";
+    } else {
+      $grade = "F";
+    }
+    echo "Average Numbers and Grades for {$student} are {$average}  {$grade}, \n";
   }
 }
 
