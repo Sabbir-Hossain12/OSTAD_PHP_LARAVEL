@@ -10,27 +10,34 @@ The password should include lowercase letters, uppercase letters, numbers, and s
 function generatePassword($length)
 {
   // initialize a null variable
-  $randomNumber = '';
+  $randomPass = '';
 
   // Made 4 string variable based on conditions of password
   $lowerCase = "abcdefghijklmnopqrstuvwxyz";
   $numbers = "1234567890";
   $upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   $specialChar = "!@#$%^&*()_+";
+  $allChar = $lowerCase . $numbers . $upperCase . $specialChar;
 
-  //newLength variable is divided by 4, because of 4 string variable above. 
-  $newLength = $length / 4;
-
-  //if loop will be run for $newLength time, if $length is 12, newLength is 3, so 4x3=12 characters will be generated.
-  //in order to include all 4 kind of strings (lower,upper,number,special), we concatenate $lowerCase,$numbers $upperCase and $specialChar.
-  for ($i = 0; $i < $newLength; $i++) {
-    $randomNumber .= $lowerCase[rand(0, strlen($lowerCase) - 1)] .
-      $numbers[rand(0, strlen($numbers) - 1)] .
-      $upperCase[rand(0, strlen($upperCase) - 1)] .
-      $specialChar[rand(0, strlen($specialChar) - 1)];
+  // loop 
+  for ($i = 0; $i < $length; $i++) {
+    $randomPass .= $allChar[rand(0, strlen($allChar) - 1)];
   }
-  // used str_shuffle() function to shuffle the order of password.
-  echo str_shuffle($randomNumber);
+  $newrandomPass = str_shuffle($randomPass);
+
+  // Check for lowercase,uppercase,number and special character.
+  $hasLowercase = preg_match('~[a-z]~', $newrandomPass);
+  $hasUppercase = preg_match('~[A-Z]~', $newrandomPass);
+  $hasNumber    = preg_match('~[0-9]~', $newrandomPass);
+  $hasSpecial   = preg_match('~[!@#$%^&*()_+]~', $randomPass);
+
+  // if all match,return true
+  if ($hasLowercase && $hasUppercase && $hasNumber && $hasSpecial) {
+    // if matched, print the password.
+    echo $randomPass;
+  } else
+    // if not matched,run the function again.
+    return generatePassword(12);
 }
 // call the function with preferable passsword length.
 generatePassword(12);
