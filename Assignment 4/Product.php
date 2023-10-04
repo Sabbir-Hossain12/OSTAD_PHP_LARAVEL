@@ -34,9 +34,9 @@ class Product
 
   public function showDetails()
   {
-    echo "ID: " . $this->id . "\n";
-    echo "Name: " . $this->name . "\n";
-    echo "ID: " . $this->getFormattedPrice() . "\n";
+    echo "- ID: " . $this->id . "\n";
+    echo "- Name: " . $this->name . "\n";
+    echo "- Price: " . $this->getFormattedPrice() . "\n";
   }
 }
 
