@@ -1,0 +1,32 @@
+{
+    "admin@admin.com": {
+        "username": "admin",
+        "password": "123456",
+        "role": "admin"
+    },
+    "sabbir@gmail.com": {
+        "username": "sabbir",
+        "password": "456456",
+        "role": "user"
+    },
+    "h.sabbir36@yahoo.com": {
+        "username": "1712312",
+        "password": "123456",
+        "role": "user"
+    },
+    "sh1389045@gmail.com": {
+        "username": "rifat",
+        "password": "456456",
+        "role": "manager"
+    },
+    "hamim@gmail.com": {
+        "username": "hamim",
+        "password": "456",
+        "role": "intern"
+    },
+    "ifat@gmail.com": {
+        "username": "ifat",
+        "password": "456",
+        "role": ""
+    }
+}
