@@ -1,3 +1,0 @@
-admin,admin@admin.com,123456,admin
-sabbir,h.sabbir36@yahoo.com,, user
-rifat,h.sabbir36@yahoo.com,, user
