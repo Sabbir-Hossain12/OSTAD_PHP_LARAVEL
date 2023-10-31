@@ -108,8 +108,9 @@ if (isset($_POST['edit'])) {
                           echo "SUPER ADMIN";
                         } else {
                           // For non-admin users, show the edit and delete buttons.
-                          echo '<button class="btn btn-sm btn-primary edit mx-1" name="edit">Edit or Create Role</button>';
+                          echo '<button class="btn btn-sm btn-primary edit mx-1" name="edit">Update</button>';
                           echo '<button class="btn btn-sm btn-danger mx-2" name="delete" type="submit">Delete Role</button>';
+                          echo '<button class="btn btn-sm btn-warning mx-2" name="deleteuser" type="submit">Delete User</button>';
                         }
                         ?>
 

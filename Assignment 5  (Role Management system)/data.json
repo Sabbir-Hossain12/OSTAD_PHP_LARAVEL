@@ -10,23 +10,18 @@
         "role": "user"
     },
     "h.sabbir36@yahoo.com": {
-        "username": "1712312",
+        "username": "Rifat",
         "password": "123456",
-        "role": "user"
-    },
-    "sh1389045@gmail.com": {
-        "username": "rifat",
-        "password": "456456",
         "role": "manager"
     },
-    "hamim@gmail.com": {
-        "username": "hamim",
+    "hashim@gmail.com": {
+        "username": "Hashim",
         "password": "456",
-        "role": "intern"
+        "role": "user"
     },
-    "ifat@gmail.com": {
-        "username": "ifat",
-        "password": "456",
-        "role": ""
+    "kartik@gmail.com": {
+        "username": "kartik",
+        "password": "789",
+        "role": "user"
     }
 }
